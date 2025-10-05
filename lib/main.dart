@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'core/theme/app_theme.dart';
 import 'screens/splash/splash_screen.dart';
-import 'screens/jobs/jobs_screen.dart'; // импорт второго экрана
+import 'screens/jobs/jobs_screen.dart';
 
 void main() {
   runApp(const MyApp());
