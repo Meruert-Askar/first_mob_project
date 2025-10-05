@@ -14,11 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme, // подключаем тему
+      theme: AppTheme.lightTheme,
       initialRoute: "/",
       routes: {
         "/": (context) => const SplashScreen(),
-        "/jobs": (context) => const JobsScreen(), // <-- добавляем
+        "/jobs": (context) => const JobsScreen(),
       },
     );
   }

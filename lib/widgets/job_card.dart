@@ -7,7 +7,7 @@ class JobCard extends StatelessWidget {
   final String salary;
   final String status;
   final String logoPath;
-  final String tag; // например: "Paystack"
+  final String tag;
 
   const JobCard({
     super.key,
@@ -26,7 +26,7 @@ class JobCard extends StatelessWidget {
       case "Expires Soon":
         return const Color.fromRGBO(218, 164, 0, 1);
       default:
-        return Colors.white; // зелёный для "none"
+        return Colors.white;
     }
   }
 
@@ -64,7 +64,6 @@ class JobCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🔹 Верхняя строка
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -76,12 +75,10 @@ class JobCard extends StatelessWidget {
                 ),
                 const SizedBox(width: 12),
 
-                // Название + компания + тег
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Название и статус
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -109,8 +106,8 @@ class JobCard extends StatelessWidget {
                                 children: [
                                   Icon(
                                     status == "Applied"
-                                        ? Icons.check_circle   // ✅ для Applied
-                                        : Icons.info,          // ℹ️ для Expires Soon
+                                        ? Icons.check_circle
+                                        : Icons.info,
                                     color: Colors.white,
                                     size: 14,
                                   ),
@@ -132,7 +129,6 @@ class JobCard extends StatelessWidget {
                       ),
                       const SizedBox(height: 4),
 
-                      // Компания
                       Text(
                         company,
                         style: const TextStyle(
@@ -143,7 +139,6 @@ class JobCard extends StatelessWidget {
                       ),
                       const SizedBox(height: 4),
 
-                      // Тег (Paystack)
                       if (tag.isNotEmpty)
                         Container(
                           padding: const EdgeInsets.symmetric(
@@ -170,7 +165,6 @@ class JobCard extends StatelessWidget {
 
             const SizedBox(height: 8),
 
-            // 🔹 Зарплата справа
             Align(
               alignment: Alignment.centerRight,
               child: Text(

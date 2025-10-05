@@ -2,7 +2,7 @@ class Job {
   final String title;
   final String company;
   final String salary;
-  final String logo; // путь к картинке
+  final String logo;
   final String category;
   final String status;
 

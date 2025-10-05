@@ -49,7 +49,6 @@ class _JobDetailScreenState extends State<JobDetailScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🔹 Лого + Название вакансии
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -100,7 +99,6 @@ class _JobDetailScreenState extends State<JobDetailScreen> {
             Divider(color: Colors.green.shade200, thickness: 1),
             const SizedBox(height: 16),
 
-            // 🔹 Основная инфа 2x2
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -121,7 +119,6 @@ class _JobDetailScreenState extends State<JobDetailScreen> {
             Divider(color: Colors.green.shade200, thickness: 1),
             const SizedBox(height: 20),
 
-            // 🔹 Job Description
             const Text(
               "JOB DESCRIPTION",
               style: TextStyle(
@@ -165,7 +162,6 @@ class _JobDetailScreenState extends State<JobDetailScreen> {
             Divider(color: Colors.green.shade200, thickness: 1),
             const SizedBox(height: 20),
 
-            // 🔹 Roles & Responsibilities
             const Text(
               "ROLES AND RESPONSIBILITIES",
               style: TextStyle(
@@ -176,9 +172,9 @@ class _JobDetailScreenState extends State<JobDetailScreen> {
               ),
             ),
             const SizedBox(height: 10),
-            Column(
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 _bullet("Drive the design process with cross-functional partners and design leads."),
                 _bullet("Design new experiences and patterns in a complex ecosystem and across platforms."),
                 _bullet("Partner with UX Research and Content Strategists through the design process."),
@@ -192,7 +188,6 @@ class _JobDetailScreenState extends State<JobDetailScreen> {
   }
 }
 
-// 🔹 Инфо-блоки
 Widget _infoBlock(String label, String value, {bool isBadge = false}) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -236,7 +231,6 @@ Widget _infoBlock(String label, String value, {bool isBadge = false}) {
   );
 }
 
-// 🔹 Буллеты
 class _bullet extends StatelessWidget {
   final String text;
   const _bullet(this.text);

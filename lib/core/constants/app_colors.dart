@@ -11,7 +11,6 @@ class AppColors {
   static const Color grey = Colors.grey;
   static const Color lightGrey = Color(0xFFB0B0B0);
 
-  // Для статусов
   static const Color success = Colors.green;
   static const Color warning = Colors.orange;
   static const Color danger = Colors.red;

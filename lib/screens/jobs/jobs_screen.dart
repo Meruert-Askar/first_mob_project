@@ -13,7 +13,6 @@ class JobsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🔹 Верхняя панель
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               child: Row(
@@ -29,13 +28,11 @@ class JobsScreen extends StatelessWidget {
               ),
             ),
 
-            // 🔹 Список вакансий
             Expanded(
               child: ListView(
                 padding:
                 const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 children: const [
-                  // ---- DESIGNER JOBS ----
                   Text(
                     "DESIGNER",
                     style: TextStyle(
